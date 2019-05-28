@@ -27,9 +27,10 @@ describe('HelloWorld.vue', () => {
     for(let i=0;i<12;i++){
       wrapper.find('.test-demo button').trigger('click');
     }
+    //读取input的value
     expect(wrapper.find('.test-demo input').element.value)
       .to.equal('10')
-
+    //读取data(){}中数据
     expect(wrapper.vm.number)
       .to.equal(10)
   })
